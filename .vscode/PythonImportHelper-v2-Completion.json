@@ -267,6 +267,15 @@
         "documentation": {}
     },
     {
+        "label": "get_last_5_entries_sales",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def get_last_5_entries_sales():\n    \"\"\"\n    Collects columns of data from sales sheet,\n    collecting the last 5 entries for each sandwich and returns the data\n    as a list of lists.\n    \"\"\"\n    sales = SHEET.worksheet(\"sales\")\n    #column = sales.col_values(3)\n    #print(column)\n    columns = []",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
