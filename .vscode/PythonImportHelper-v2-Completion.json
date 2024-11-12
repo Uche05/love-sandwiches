@@ -253,7 +253,16 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def update_sales_worksheet(data):\n    \"\"\"\n    Update sales worksheet, add new row with the list data provided.\n    \"\"\"\n    print(\"Updating sales worksheet.....\\n\")\n    sales_worksheet = SHEET.worksheet(\"sales\")\n    sales_worksheet.append_row(data)\n    print(\"Sales worksheet updated successfully. \\n\")\ndef calculate_surplus_data(sales_row):\n    \"\"\"",
+        "peekOfCode": "def update_sales_worksheet(data):\n    \"\"\"\n    Update sales worksheet, add new row with the list data provided.\n    \"\"\"\n    print(\"Updating sales worksheet.....\\n\")\n    sales_worksheet = SHEET.worksheet(\"sales\")\n    sales_worksheet.append_row(data)\n    print(\"Sales worksheet updated successfully. \\n\")\ndef update_surplus_data(data):\n    \"\"\"",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "update_surplus_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def update_surplus_data(data):\n    \"\"\"\n    Update surplus worksheet, add new row with data calculated\n    \"\"\"\n    print(\"Updating surplus spreadsheet.....\\n\")\n    surplus_sheet = SHEET.worksheet(\"surplus\")\n    surplus_sheet.append_row(data)\n    print(\"Surplus data successfully uploaded! \\n\")\ndef calculate_surplus_data(sales_row):\n    \"\"\"",
         "detail": "run",
         "documentation": {}
     },
@@ -271,7 +280,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Run all program functions\n    \"\"\"\n    data = get_sales_data()\n    sales_data = [int(num) for num in data]\n    update_sales_worksheet(sales_data)\n    new_surplus_data = calculate_surplus_data(sales_data)\n    print(new_surplus_data)\nprint(\"Welcome to love sandwiches data automation!\")",
+        "peekOfCode": "def main():\n    \"\"\"\n    Run all program functions\n    \"\"\"\n    data = get_sales_data()\n    sales_data = [int(num) for num in data]\n    update_sales_worksheet(sales_data)\n    new_surplus_data = calculate_surplus_data(sales_data)\n    update_surplus_data(new_surplus_data)\nprint(\"Welcome to love sandwiches data automation!\")",
         "detail": "run",
         "documentation": {}
     },
