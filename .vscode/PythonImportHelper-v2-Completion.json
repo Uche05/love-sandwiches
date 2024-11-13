@@ -276,11 +276,20 @@
         "documentation": {}
     },
     {
+        "label": "calculate_stock_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def calculate_stock_data(data):\n    \"\"\"\n    Calculate the average stock for each item type, adding 10%\n    \"\"\"\n    print(\"Calculating stock data.....\\n\")\n    new_stock_data = []\n    for column in data:\n        int_column = [int(num) for num in column]\n        average = sum(int_column)/ len(int_column)\n        stock_num = average * 1.1",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Run all program functions\n    \"\"\"\n    data = get_sales_data()\n    sales_data = [int(num) for num in data]\n    update_worksheet(sales_data, \"sales\")\n    new_surplus_data = calculate_surplus_data(sales_data)\n    update_worksheet(new_surplus_data, \"surplus\")\nprint(\"Welcome to love sandwiches data automation!\")",
+        "peekOfCode": "def main():\n    \"\"\"\n    Run all program functions\n    \"\"\"\n    data = get_sales_data()\n    sales_data = [int(num) for num in data]\n    update_worksheet(sales_data, \"sales\")\n    new_surplus_data = calculate_surplus_data(sales_data)\n    update_worksheet(new_surplus_data, \"surplus\")\n    sales_columns = get_last_5_entries_sales()",
         "detail": "run",
         "documentation": {}
     },
@@ -326,15 +335,6 @@
         "importPath": "run",
         "description": "run",
         "peekOfCode": "SHEET = GSPREAD_CLIENT.open('love_sandwiches')\ndef get_sales_data():\n    \"\"\"\n    Get sales figures input from the user.\n    \"\"\"\n    while True:\n        print(\"Please enter sales data from the last market.\")\n        print(\"Data should be six numbers, seperated by commas!\")\n        print(\"Example: 10,20,32,40,52,60\\n\")\n        data_sales = input(\"Enter your data here: \")",
-        "detail": "run",
-        "documentation": {}
-    },
-    {
-        "label": "sales_columns",
-        "kind": 5,
-        "importPath": "run",
-        "description": "run",
-        "peekOfCode": "sales_columns = get_last_5_entries_sales()",
         "detail": "run",
         "documentation": {}
     }
