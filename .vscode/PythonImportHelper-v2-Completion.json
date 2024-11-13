@@ -271,7 +271,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_last_5_entries_sales():\n    \"\"\"\n    Collects columns of data from sales sheet,\n    collecting the last 5 entries for each sandwich and returns the data\n    as a list of lists.\n    \"\"\"\n    sales = SHEET.worksheet(\"sales\")\n    #column = sales.col_values(3)\n    #print(column)\n    columns = []",
+        "peekOfCode": "def get_last_5_entries_sales():\n    \"\"\"\n    Collects columns of data from sales sheet,\n    collecting the last 5 entries for each sandwich and returns the data\n    as a list of lists.\n    \"\"\"\n    sales = SHEET.worksheet(\"sales\")\n    columns = []\n    for ind in range(1,7):\n        column = sales.col_values(ind)",
         "detail": "run",
         "documentation": {}
     },
@@ -326,6 +326,15 @@
         "importPath": "run",
         "description": "run",
         "peekOfCode": "SHEET = GSPREAD_CLIENT.open('love_sandwiches')\ndef get_sales_data():\n    \"\"\"\n    Get sales figures input from the user.\n    \"\"\"\n    while True:\n        print(\"Please enter sales data from the last market.\")\n        print(\"Data should be six numbers, seperated by commas!\")\n        print(\"Example: 10,20,32,40,52,60\\n\")\n        data_sales = input(\"Enter your data here: \")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "sales_columns",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "sales_columns = get_last_5_entries_sales()",
         "detail": "run",
         "documentation": {}
     }
